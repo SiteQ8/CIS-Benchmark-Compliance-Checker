@@ -1,0 +1,17 @@
+title: CIS Benchmark Compliance Checker
+description: Automated security auditing for enterprise infrastructure
+theme: jekyll-theme-cayman
+baseurl: /CIS-Benchmark-Compliance-Checker
+url: https://siteq8.github.io
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

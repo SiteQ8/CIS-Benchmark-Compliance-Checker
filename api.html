@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - CIS Benchmark Compliance Checker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🛡️ CIS Checker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="usage.html" class="nav-link">Usage</a></li>
+                <li><a href="examples.html" class="nav-link">Examples</a></li>
+                <li><a href="api.html" class="nav-link active">API</a></li>
+                <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn-github">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 60px 20px;">
+        <div class="container" style="max-width: 900px;">
+            <h1 style="font-size: 42px; margin-bottom: 20px;">⚡ API Reference</h1>
+            <p style="font-size: 18px; color: #666; margin-bottom: 40px;">Python API documentation for developers</p>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">BaseAuditor Class</h2>
+                <p>Abstract base class for all OS-specific auditors.</p>
+
+                <h3 style="margin: 25px 0 15px;">Methods</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <code style="color: var(--primary); font-weight: 600;">run_all_checks() → List[CheckResult]</code>
+                    <p style="margin: 10px 0 0;">Execute all compliance checks and return results.</p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <code style="color: var(--primary); font-weight: 600;">get_compliance_score() → float</code>
+                    <p style="margin: 10px 0 0;">Calculate and return compliance percentage (0-100).</p>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <code style="color: var(--primary); font-weight: 600;">export_results(filepath: str)</code>
+                    <p style="margin: 10px 0 0;">Export audit results to JSON file.</p>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">CheckResult Class</h2>
+                <p>Represents the result of a single CIS check.</p>
+
+                <h3 style="margin: 25px 0 15px;">Attributes</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin: 10px 0;"><code>check_id</code> - Check identifier (e.g., "1.1.1")</li>
+                    <li style="margin: 10px 0;"><code>title</code> - Check title</li>
+                    <li style="margin: 10px 0;"><code>status</code> - Result status (pass, fail, skip, error)</li>
+                    <li style="margin: 10px 0;"><code>severity</code> - Severity level (low, medium, high, critical)</li>
+                    <li style="margin: 10px 0;"><code>remediation</code> - Fix instructions</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">HTMLReporter Class</h2>
+                <p>Generate HTML compliance reports.</p>
+
+                <h3 style="margin: 25px 0 15px;">Methods</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <code style="color: var(--primary); font-weight: 600;">generate(audit_data: Dict, output_path: str) → str</code>
+                    <p style="margin: 10px 0 0;">Generate HTML report from audit data and return file path.</p>
+                </div>
+
+                <p style="margin-top: 30px;"><a href="index.html" style="color: var(--primary);">← Back to Home</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

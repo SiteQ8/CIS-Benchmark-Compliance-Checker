@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Benchmark Compliance Checker - Documentation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🛡️ CIS Checker</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#platforms" class="nav-link">Platforms</a></li>
+                <li><a href="#quickstart" class="nav-link">Quick Start</a></li>
+                <li><a href="#docs" class="nav-link">Docs</a></li>
+                <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn-github">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">v1.0.0 Released</div>
+            <h1 class="hero-title">CIS Benchmark<br>Compliance Checker</h1>
+            <p class="hero-subtitle">Automated security auditing and remediation for enterprise infrastructure</p>
+            <div class="hero-buttons">
+                <a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn btn-primary">
+                    <span>📥</span> Get Started
+                </a>
+                <a href="#quickstart" class="btn btn-secondary">
+                    <span>📚</span> View Documentation
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Platforms</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">200+</div>
+                    <div class="stat-label">Security Checks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">✨ Key Features</h2>
+            <p class="section-subtitle">Comprehensive security compliance automation in one powerful tool</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Automated Auditing</h3>
+                    <p>Run comprehensive CIS benchmark checks across all your systems in minutes. Fast, accurate, and reliable.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Smart Remediation</h3>
+                    <p>Automatically fix non-compliant configurations with built-in rollback support and backup capabilities.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rich Reporting</h3>
+                    <p>Generate beautiful HTML reports with compliance scores, trends, and detailed remediation guidance.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Platform</h3>
+                    <p>Support for Linux, Windows, and macOS systems from a single unified tool and interface.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>CI/CD Ready</h3>
+                    <p>Seamlessly integrate into your automated pipelines with GitHub Actions, GitLab CI, and Jenkins.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Customizable</h3>
+                    <p>Adapt checks and profiles to your organization's specific security requirements and policies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section id="platforms" class="platforms">
+        <div class="container">
+            <h2 class="section-title">🖥️ Supported Platforms</h2>
+            <p class="section-subtitle">Comprehensive coverage across major operating systems</p>
+
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">🐧</div>
+                    <h3>Ubuntu Linux</h3>
+                    <p>20.04 LTS, 22.04 LTS, 24.04 LTS</p>
+                    <div class="platform-badge">CIS v1.0.0 - v2.0.0</div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">🎩</div>
+                    <h3>Red Hat Enterprise Linux</h3>
+                    <p>RHEL 8, RHEL 9</p>
+                    <div class="platform-badge">CIS v2.0.0 - v3.0.0</div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">📦</div>
+                    <h3>Amazon Linux</h3>
+                    <p>Amazon Linux 2, 2023</p>
+                    <div class="platform-badge">CIS v3.0.0</div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">🪟</div>
+                    <h3>Windows Server</h3>
+                    <p>Server 2019, Server 2022</p>
+                    <div class="platform-badge">CIS v2.0.0 - v3.0.0</div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">🍎</div>
+                    <h3>macOS</h3>
+                    <p>Ventura (13), Sonoma (14)</p>
+                    <div class="platform-badge">CIS v4.0.0 - v5.0.0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <h2 class="section-title">🚀 Quick Start Guide</h2>
+            <p class="section-subtitle">Get up and running in minutes</p>
+
+            <div class="quickstart-grid">
+                <div class="quickstart-step">
+                    <div class="step-number">1</div>
+                    <h3>Installation</h3>
+                    <div class="code-block">
+<pre><code># Clone the repository
+git clone https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker.git
+cd CIS-Benchmark-Compliance-Checker
+
+# Install dependencies
+pip install -r requirements.txt
+python setup.py install</code></pre>
+                    </div>
+                </div>
+
+                <div class="quickstart-step">
+                    <div class="step-number">2</div>
+                    <h3>Run Your First Audit</h3>
+                    <div class="code-block">
+<pre><code># Run compliance audit
+python -m cis_checker audit --os ubuntu --level 1
+
+# Generate HTML report
+python -m cis_checker report --format html --output ./reports</code></pre>
+                    </div>
+                </div>
+
+                <div class="quickstart-step">
+                    <div class="step-number">3</div>
+                    <h3>Apply Remediation</h3>
+                    <div class="code-block">
+<pre><code># Dry run to preview changes
+python -m cis_checker remediate --dry-run
+
+# Apply fixes with backup
+python -m cis_checker remediate --profile ubuntu_22_04 --backup</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Checks Section -->
+    <section id="checks" class="checks">
+        <div class="container">
+            <h2 class="section-title">🔒 Security Categories</h2>
+            <p class="section-subtitle">Comprehensive coverage across all CIS benchmark areas</p>
+
+            <div class="checks-grid">
+                <div class="check-category">
+                    <div class="check-icon">⚙️</div>
+                    <h3>Initial Setup</h3>
+                    <p>Filesystem configuration, boot settings, mandatory access control, software updates</p>
+                    <div class="check-count">30+ checks</div>
+                </div>
+
+                <div class="check-category">
+                    <div class="check-icon">🔌</div>
+                    <h3>Services</h3>
+                    <p>System services validation, legacy protocol detection, service hardening</p>
+                    <div class="check-count">25+ checks</div>
+                </div>
+
+                <div class="check-category">
+                    <div class="check-icon">🌐</div>
+                    <h3>Network Config</h3>
+                    <p>Firewall rules, network parameters, protocol security, IPv6 configuration</p>
+                    <div class="check-count">40+ checks</div>
+                </div>
+
+                <div class="check-category">
+                    <div class="check-icon">📝</div>
+                    <h3>Logging & Auditing</h3>
+                    <p>Audit daemon config, log file permissions, retention policies, remote logging</p>
+                    <div class="check-count">35+ checks</div>
+                </div>
+
+                <div class="check-category">
+                    <div class="check-icon">🔐</div>
+                    <h3>Access Control</h3>
+                    <p>SSH hardening, PAM configuration, password policies, user account security</p>
+                    <div class="check-count">50+ checks</div>
+                </div>
+
+                <div class="check-category">
+                    <div class="check-icon">🛠️</div>
+                    <h3>System Maintenance</h3>
+                    <p>File permissions, system integrity, unowned files, patch management</p>
+                    <div class="check-count">20+ checks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Links -->
+    <section id="docs" class="docs-section">
+        <div class="container">
+            <h2 class="section-title">📖 Documentation</h2>
+            <div class="docs-grid">
+                <a href="usage.html" class="doc-card">
+                    <div class="doc-icon">📘</div>
+                    <h3>Usage Guide</h3>
+                    <p>Complete CLI reference and configuration options</p>
+                </a>
+
+                <a href="examples.html" class="doc-card">
+                    <div class="doc-icon">💡</div>
+                    <h3>Examples</h3>
+                    <p>Code examples and integration recipes</p>
+                </a>
+
+                <a href="api.html" class="doc-card">
+                    <div class="doc-icon">⚡</div>
+                    <h3>API Reference</h3>
+                    <p>Python API documentation and methods</p>
+                </a>
+
+                <a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="doc-card">
+                    <div class="doc-icon">💻</div>
+                    <h3>GitHub</h3>
+                    <p>Source code, issues, and contributions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Secure Your Infrastructure?</h2>
+            <p>Start automating your CIS compliance today</p>
+            <a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn btn-primary btn-large">
+                <span>🚀</span> Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CIS Benchmark Checker</h4>
+                    <p>Automated security compliance for enterprise infrastructure</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="usage.html">Documentation</a></li>
+                        <li><a href="examples.html">Examples</a></li>
+                        <li><a href="api.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker">GitHub</a></li>
+                        <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker/issues">Issues</a></li>
+                        <li><a href="mailto:site@hotmail.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker/blob/main/LICENSE">MIT License</a></li>
+                        <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker/blob/main/SECURITY.md">Security Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SiteQ8. Released under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
