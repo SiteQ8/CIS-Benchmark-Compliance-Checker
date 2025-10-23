@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Guide - CIS Benchmark Compliance Checker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🛡️ CIS Checker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="usage.html" class="nav-link active">Usage</a></li>
+                <li><a href="examples.html" class="nav-link">Examples</a></li>
+                <li><a href="api.html" class="nav-link">API</a></li>
+                <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn-github">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 60px 20px;">
+        <div class="container" style="max-width: 900px;">
+            <h1 style="font-size: 42px; margin-bottom: 20px;">📚 Usage Guide</h1>
+            <p style="font-size: 18px; color: #666; margin-bottom: 40px;">Complete reference for using the CIS Benchmark Compliance Checker</p>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">Installation</h2>
+                <div class="code-block">
+<pre><code># Clone repository
+git clone https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker.git
+cd CIS-Benchmark-Compliance-Checker
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install package
+python setup.py install</code></pre>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">CLI Commands</h2>
+
+                <h3 style="margin: 30px 0 15px;">Audit Command</h3>
+                <p>Run compliance audits against CIS benchmarks.</p>
+                <div class="code-block" style="margin: 15px 0;">
+<pre><code># Basic audit
+python -m cis_checker audit
+
+# Specify OS and level
+python -m cis_checker audit --os ubuntu --level 1
+
+# Generate multiple formats
+python -m cis_checker audit --format html --format json</code></pre>
+                </div>
+
+                <h3 style="margin: 30px 0 15px;">Remediate Command</h3>
+                <p>Apply fixes for non-compliant configurations.</p>
+                <div class="code-block" style="margin: 15px 0;">
+<pre><code># Dry run (preview changes)
+python -m cis_checker remediate --dry-run
+
+# Apply with backup
+python -m cis_checker remediate --profile ubuntu_22_04 --backup
+
+# Specific checks only
+python -m cis_checker remediate --checks 1.1.1,2.3.1</code></pre>
+                </div>
+
+                <h3 style="margin: 30px 0 15px;">Report Command</h3>
+                <p>Generate reports from audit results.</p>
+                <div class="code-block" style="margin: 15px 0;">
+<pre><code># Generate HTML report
+python -m cis_checker report --input results.json --format html
+
+# Generate CSV report
+python -m cis_checker report --input results.json --format csv</code></pre>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">Configuration</h2>
+                <p>CIS benchmark profiles are stored in JSON format in the <code>configs/</code> directory.</p>
+                <p style="margin-top: 20px;"><a href="index.html" style="color: var(--primary);">← Back to Home</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

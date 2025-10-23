@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - CIS Benchmark Compliance Checker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🛡️ CIS Checker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="usage.html" class="nav-link">Usage</a></li>
+                <li><a href="examples.html" class="nav-link active">Examples</a></li>
+                <li><a href="api.html" class="nav-link">API</a></li>
+                <li><a href="https://github.com/SiteQ8/CIS-Benchmark-Compliance-Checker" class="btn-github">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 60px 20px;">
+        <div class="container" style="max-width: 900px;">
+            <h1 style="font-size: 42px; margin-bottom: 20px;">💡 Examples & Recipes</h1>
+            <p style="font-size: 18px; color: #666; margin-bottom: 40px;">Practical examples for common use cases</p>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">GitHub Actions Integration</h2>
+                <div class="code-block">
+<pre><code>name: CIS Compliance Audit
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+  push:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python setup.py install
+
+      - name: Run CIS Audit
+        run: |
+          python -m cis_checker audit --format json
+
+      - name: Upload Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: compliance-report
+          path: reports/</code></pre>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">Python API Usage</h2>
+                <div class="code-block">
+<pre><code>from cis_checker.auditors.ubuntu_auditor import UbuntuAuditor
+from cis_checker.reports.html_reporter import HTMLReporter
+
+# Create auditor
+auditor = UbuntuAuditor("ubuntu_22_04", level=1)
+
+# Run checks
+results = auditor.run_all_checks()
+
+# Get compliance score
+score = auditor.get_compliance_score()
+print(f"Compliance Score: {score}%")
+
+# Export results
+auditor.export_results("audit_results.json")
+
+# Generate HTML report
+import json
+with open("audit_results.json") as f:
+    data = json.load(f)
+
+reporter = HTMLReporter()
+reporter.generate(data, "report.html")</code></pre>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">Scheduled Audits</h2>
+                <div class="code-block">
+<pre><code>#!/bin/bash
+# Add to crontab for weekly audits
+# 0 0 * * 0 /path/to/audit_script.sh
+
+cd /path/to/CIS-Benchmark-Compliance-Checker
+
+# Run audit
+python -m cis_checker audit --format html --format json --output /var/reports
+
+# Send notification
+if [ $? -eq 0 ]; then
+    echo "CIS audit completed successfully" | mail -s "CIS Audit Report" admin@example.com
+fi</code></pre>
+                </div>
+                <p style="margin-top: 30px;"><a href="index.html" style="color: var(--primary);">← Back to Home</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
