@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-CIS Benchmark Compliance Checker is a comprehensive security automation tool that helps organizations maintain compliance with Center for Internet Security (CIS) benchmarks across multiple operating systems.
+CIS Benchmark Compliance Checker is a security automation tool that helps organizations maintain compliance with Center for Internet Security (CIS) benchmarks across multiple operating systems.
 
 ### Key Features
 
@@ -72,7 +72,7 @@ python -m cis_checker remediate --dry-run
 
 ## 📖 Documentation
 
-Comprehensive documentation is available at: **https://siteq8.github.io/CIS-Benchmark-Compliance-Checker**
+Documentation is available at: **https://siteq8.github.io/CIS-Benchmark-Compliance-Checker**
 
 ## 🤝 Contributing
 
