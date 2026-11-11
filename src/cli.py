@@ -102,7 +102,7 @@ def remediate(profile, checks, dry_run, backup, force):
 
     if backup:
         click.echo("📦 Creating system backup...")
-        # Backup implementation would go here
+        # TODO: backup
         click.secho("✅ Backup created", fg='green')
 
     if checks:
@@ -111,7 +111,7 @@ def remediate(profile, checks, dry_run, backup, force):
     else:
         click.echo("   Remediating all failed checks")
 
-    # Remediation implementation would go here
+    # TODO: remediation
     click.echo("\n🔄 Applying remediations...")
     click.secho("✅ Remediation completed!", fg='green', bold=True)
     click.echo("\n💡 Tip: Run 'cis-checker audit' again to verify changes")

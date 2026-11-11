@@ -131,7 +131,7 @@ class UbuntuAuditor(BaseAuditor):
         try:
             result = subprocess.run(['systemctl', 'list-units', '--type=service', '--state=running'],
                                   capture_output=True, text=True)
-            # Simple check - in production, compare against baseline
+            # TODO: compare against a baseline
             return CheckResult(
                 check_id="2.1.1",
                 title="Ensure unnecessary services are not running",
