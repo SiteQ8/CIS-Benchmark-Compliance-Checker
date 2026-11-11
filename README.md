@@ -6,7 +6,7 @@
 
 > **Automated CIS Benchmark compliance auditing and remediation tool for Ubuntu, RHEL, Amazon Linux, Windows Server, and macOS**
 
-## 🎯 Overview
+## Overview
 
 CIS Benchmark Compliance Checker is a security automation tool that helps organizations maintain compliance with Center for Internet Security (CIS) benchmarks across multiple operating systems.
 
@@ -19,7 +19,7 @@ CIS Benchmark Compliance Checker is a security automation tool that helps organi
 ✅ **Customizable Profiles**: Adapt checks to your organizational requirements  
 ✅ **CI/CD Integration**: Easily integrate into automated pipelines  
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -51,7 +51,7 @@ python -m cis_checker remediate --profile ubuntu_22_04 --backup
 python -m cis_checker remediate --dry-run
 ```
 
-## 📊 Supported Platforms
+## Supported Platforms
 
 | Operating System | Versions | CIS Benchmark Version |
 |-----------------|----------|----------------------|
@@ -61,7 +61,7 @@ python -m cis_checker remediate --dry-run
 | Windows Server | 2019, 2022 | v2.0.0 - v3.0.0 |
 | macOS | 13, 14 | v4.0.0 - v5.0.0 |
 
-## 🔍 Security Categories Checked
+## Security Categories Checked
 
 1. **Initial Setup**: Filesystem, boot settings, mandatory access control
 2. **Services**: System services, special purpose services, service clients
@@ -70,23 +70,23 @@ python -m cis_checker remediate --dry-run
 5. **Access Control**: PAM, SSH, user accounts, authentication
 6. **System Maintenance**: File permissions, system file integrity
 
-## 📖 Documentation
+## Documentation
 
 Documentation is available at: **https://siteq8.github.io/CIS-Benchmark-Compliance-Checker**
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
 
-## 🔒 Security
+## Security
 
 Please report security vulnerabilities to site@hotmail.com. See [SECURITY.md](SECURITY.md) for details.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+## Contact
 
 - **Author**: SiteQ8
 - **Email**: site@hotmail.com
